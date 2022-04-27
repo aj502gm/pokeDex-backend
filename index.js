@@ -15,20 +15,12 @@ app.use((req,res,next)=>{
 })
 
 //PRODUCTS ROUTES
-app.get('/products', getProducts)
-app.get('/deleteProduct/:id', (req,res) =>{
-    let idToDelete = req.params.id  
-    // console.log(idToDelete)        
-    // return deleteProducts(req,res,idToDelete) 
-});
-app.post('/editProduct', (req,res) =>{
-    console.log(req.body)
-    // return editProduct(req,res,req.body);
-});
-app.post('/createProduct', function(req, res) {
-    console.log(req.body);
-
-    // return createProduct(req,res,req.body);
-});
+app.get('/pokemons', () => {})
+app.get('/pokemon/:name',  () => {});
+// app.post('/editProduct', (req,res) =>{
+//     console.log(req.body)
+//     // return editProduct(req,res,req.body);
+// });
+//app.post('/createProduct',  () => {});
 
 app.listen(PORT, function () {console.log(`POKEMON API AT: ${PORT}!`); });
